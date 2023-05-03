@@ -15,7 +15,7 @@ env:
   images_dir: /opt/images                                       # 固件目录
   work_dir: /opt/padavan/trunk                                  # 工作目录
   config_dir: /opt/padavan/trunk/configs/templates              # 设备模板目录
-  src_git: https://github.com/hanwckf/rt-n56u.git               # 源码地址
+  src_git: https://github.com/keke1023/Padavan.git               # 源码地址
 
 jobs:
   build:
@@ -28,8 +28,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - build_variant: "mt7621"
-            targets: "GHL"
+          - build_variant: "mt7620"
+            targets: "PSG1218"
       - name: Checkout main            # 导入主分支
         uses: actions/checkout@v2
       - name: Prepare environment      # 准备编译环境
